@@ -4,3 +4,5 @@
 - Tic Tac Toe game using JavaScript
 - Check Prime Number using JavaScript
 - Scroll Animation using JavaScript and CSS
+- Counter using JavaScript
+
