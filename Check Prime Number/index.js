@@ -2,24 +2,22 @@ const result = document.getElementById("result");
 const input = document.getElementById("inputNumber");
 const enterBtn = document.getElementById("enterBtn");
 
-enterBtn.addEventListener("click", checkPrime);
+enterBtn.addEventListener("click", () => {
+    result.textContent = checkPrime();
+});
 
 function checkPrime() {
     let number = input.value;
-    if(isNaN(number)){
-        result.textContent = `Result: ${number} is NaN`;
-        return;
+    if (isNaN(number)) {
+        return `Result: ${number} is NaN`;
     }
     if (number < 2) {
-        result.textContent = `Result: ${number} is NOT a prime number`;
-        return;
+        return `Result: ${number} is NOT a prime number`;
     }
     for (i = 2; i < number; i += 1) {
         if (number % i == 0) {
-            result.textContent = `Result: ${number} is NOT a prime number`;
-            return;
+            return `Result: ${number} is NOT a prime number`;
         }
     }
-
-    result.textContent = `Result: ${number} is a PRIME number`;
+    return `Result: ${number} is a PRIME number`;
 }
