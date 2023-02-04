@@ -54,7 +54,7 @@ const resetCurrent = function () {
     player2Current.textContent = score;
 }
 const checkWinner = function () {
-    const win = function(){
+    const win = function () {
         player1.classList.remove("player--active");
         player2.classList.remove("player--active");
         rollBtn.disabled = true;
@@ -62,44 +62,19 @@ const checkWinner = function () {
     }
     let scorePlayer1 = Number(player1Score.textContent);
     let scorePlayer2 = Number(player2Score.textContent);
-    if (scorePlayer1 >= 100){
+    if (scorePlayer1 >= 100) {
         win()
         player1.classList.add("player--winner");
-    } else if (scorePlayer2 >= 100){
+    } else if (scorePlayer2 >= 100) {
         win()
         player2.classList.add("player--winner");
     }
-}
-const changeDiceImg = function (dice) {
-    switch (dice) {
-        case 1:
-            diceImg.src = "dice-1.png";
-            break;
-        case 2:
-            diceImg.src = "dice-2.png";
-            break;
-        case 3:
-            diceImg.src = "dice-3.png";
-            break;
-        case 4:
-            diceImg.src = "dice-4.png";
-            break;
-        case 5:
-            diceImg.src = "dice-5.png";
-            break;
-        case 6:
-            diceImg.src = "dice-6.png";
-            break;
-        default:
-            break;
-    }
-
 }
 
 newGame();
 rollBtn.addEventListener("click", function () {
     const dice = Number(Math.floor(Math.random() * 6) + 1);
-    changeDiceImg(dice);
+    diceImg.src = `dice-${dice}.png`;
     score += dice;
     if (dice === 1) {
         resetCurrent();
@@ -115,7 +90,7 @@ rollBtn.addEventListener("click", function () {
 holdBtn.addEventListener("click", function () {
     updateScore();
     resetCurrent();
-    changePlayer();
     checkWinner();
+    changePlayer();
 });
 newBtn.addEventListener("click", newGame);
