@@ -50,6 +50,7 @@ const resetCurrent = function () {
 }
 const checkWinner = function () {
     const win = function () {
+        diceImg.src = "";
         player1.classList.remove("player--active");
         player2.classList.remove("player--active");
         rollBtn.disabled = true;
