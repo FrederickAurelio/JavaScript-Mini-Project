@@ -29,13 +29,8 @@ const newGame = function () {
     diceImg.src = "";
 }
 const changePlayer = function () {
-    if (player1.classList.contains("player--active")) {
-        player1.classList.remove("player--active");
-        player2.classList.add("player--active");
-    } else {
-        player1.classList.add("player--active");
-        player2.classList.remove("player--active");
-    }
+    player1.classList.toggle("player--active");
+    player2.classList.toggle("player--active");
 }
 const updateScore = function () {
     if (player1.classList.contains("player--active")) {
