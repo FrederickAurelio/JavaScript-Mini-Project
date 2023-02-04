@@ -85,7 +85,7 @@ rollBtn.addEventListener("click", function () {
 holdBtn.addEventListener("click", function () {
     updateScore();
     resetCurrent();
-    checkWinner();
     changePlayer();
+    checkWinner();
 });
 newBtn.addEventListener("click", newGame);
