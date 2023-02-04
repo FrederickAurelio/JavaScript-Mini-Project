@@ -62,10 +62,10 @@ const checkWinner = function () {
     }
     let scorePlayer1 = Number(player1Score.textContent);
     let scorePlayer2 = Number(player2Score.textContent);
-    if (scorePlayer1 >= 10){
+    if (scorePlayer1 >= 100){
         win()
         player1.classList.add("player--winner");
-    } else if (scorePlayer2 >= 10){
+    } else if (scorePlayer2 >= 100){
         win()
         player2.classList.add("player--winner");
     }
