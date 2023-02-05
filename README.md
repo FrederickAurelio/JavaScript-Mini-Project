@@ -5,4 +5,5 @@
 - Check Prime Number
 - Scroll Animation
 - Counter
+- Modal
 - Pig Dice Game
