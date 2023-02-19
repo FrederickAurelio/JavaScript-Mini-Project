@@ -16,5 +16,5 @@ const timer = function () {
         clearInterval(intervalId);
     }
 }
-
+timer();
 let intervalId = setInterval(timer, 200);
